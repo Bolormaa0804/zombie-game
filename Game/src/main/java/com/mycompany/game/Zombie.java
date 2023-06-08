@@ -13,6 +13,11 @@ class Zombie extends Character {
     public Zombie(String type, int initialHealth, int attack) {
         super(type, initialHealth, attack);
     }
+    public void takeDamage( int damage){
+        initialHealth=-damage;
+    }
+    public boolean isDead(){
+        return initialHealth<=0;
 }
 
 class CommonInfected extends Zombie {
